@@ -45,12 +45,20 @@ person14NameRequest.addEventListener("load", function (res) {
     console.log("response 14 name", JSON.parse(res.currentTarget.response).name);
     let personFourteen = document.getElementById("person14Name");
     personFourteen.innerHTML = (JSON.parse(res.currentTarget.response).name);
-})
+});
 person14NameRequest.open("GET", "https://swapi.co/api/people/14");
 person14NameRequest.send();
 
-let homeworld14Request = new XMLHttpRequest();
-
+let species14Request = new XMLHttpRequest();
+species14Request.addEventListener("load", function (res) {
+    console.log("response 14", res);
+    console.log("response 14 object", JSON.parse(res.currentTarget.response));
+    console.log("response 14 homeworld", JSON.parse(res.currentTarget.response).name);
+    let speciesFourteen = document.getElementById("person14Species");
+    speciesFourteen.innerHTML = (JSON.parse(res.currentTarget.response).name)
+});
+species14Request.open("GET", "https://swapi.co/api/species/1");
+species14Request.send();
 
 // Geta  list of all the films from the SWAPI: https://swapi.co/api/films
 // Fill in "filmList" with a new "li" element for each "film"
