@@ -36,7 +36,7 @@ person4HomeworldRequest.send();
 
 // Get a Person object from the SWAPI: https://swapi.co/api/people/14
 // Fill in "person14Name" with the value of Person's "name"
-// Fill in "person14Species" with teh value of Person's (first) "species" (name)
+// Fill in "person14Species" with the value of Person's (first) "species" (name)
 
 let person14NameRequest = new XMLHttpRequest();
 person14NameRequest.addEventListener("load", function (res) {
